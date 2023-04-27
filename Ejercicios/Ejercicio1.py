@@ -16,5 +16,4 @@ Nos solicita desarrollar un árbol de decisión para resolver esta tarea con los
 - cuando se requiere elegir cuál será la próxima acción para tomar y moverse rápidamente de un lugar a otro, es el propio Nick Fury es la opción más lógica;
 - Thor tiene el poder para destruir ejércitos completos;
 - no se debe utilizar árbol balanceado.
-
 """

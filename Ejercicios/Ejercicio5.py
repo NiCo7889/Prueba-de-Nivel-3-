@@ -1,5 +1,5 @@
 """
-Implementando una programacion dinamica orientada a objetos desarrollar un algoritmo que permita cargar 1000 número enteros, generados de manera aleatoria y que resuelva 
+Desarrollar un algoritmo que permita cargar 1000 número enteros, generados de manera aleatoria y que resuelva 
 las siguientes actividades:
  
 - realizar los barridos preorden, inorden, postorden y por nivel sobre el árbol generado;
@@ -10,7 +10,9 @@ las siguientes actividades:
 - contar cuántos números pares e impares hay en el árbol.
 """
 
+
 import random
+
 
 class Nodo:
     def __init__(self, valor):
@@ -198,38 +200,41 @@ arbol = ArbolBinario()
 for i in range(1000):
     arbol.agregar(random.randint(1, 10000))
 
-# realizar los barridos preorden, inorden, postorden y por nivel sobre el árbol generado
-print("Barrido preorden:")
-arbol.preorden(arbol.raiz)
-print()
 
-print("Barrido inorden:")
-arbol.inorden(arbol.raiz)
-print()
+if __name__ == "__main__":
 
-print("Barrido postorden:")
-arbol.postorden(arbol.raiz)
-print()
+    # realizar los barridos preorden, inorden, postorden y por nivel sobre el árbol generado
+    print("Barrido preorden:")
+    arbol.preorden(arbol.raiz)
+    print()
 
-print("Barrido por nivel:")
-arbol.por_nivel()
-print()
+    print("Barrido inorden:")
+    arbol.inorden(arbol.raiz)
+    print()
 
-# determinar si un número está cargado en el árbol o no
-print("El número 5000 está en el árbol:", arbol.buscar(5000))
+    print("Barrido postorden:")
+    arbol.postorden(arbol.raiz)
+    print()
 
-arbol.eliminar(5000)
-arbol.eliminar(7500)
-arbol.eliminar(10000)
+    print("Barrido por nivel:")
+    arbol.por_nivel()
+    print()
 
-# determinar la altura del subárbol izquierdo y del subárbol derecho
-print("Altura del subárbol izquierdo:", arbol.altura_izquierda())
-print("Altura del subárbol derecho:", arbol.altura_derecha())
+    # determinar si un número está cargado en el árbol o no
+    print("El número 5000 está en el árbol:", arbol.buscar(5000))
 
-# determinar la cantidad de ocurrencias de un elemento en el árbol
-print("El número 300 aparece", arbol.cantidad(300), "veces en el árbol")
+    arbol.eliminar(5000)
+    arbol.eliminar(7500)
+    arbol.eliminar(10000)
 
-# contar cuántos números pares e impares hay en el árbol
-pares, impares = arbol.contar_pares_impares()
-print("Cantidad de números pares:", pares)
-print("Cantidad de números impares:", impares)
+    # determinar la altura del subárbol izquierdo y del subárbol derecho
+    print("Altura del subárbol izquierdo:", arbol.altura_izquierda())
+    print("Altura del subárbol derecho:", arbol.altura_derecha())
+
+    # determinar la cantidad de ocurrencias de un elemento en el árbol
+    print("El número 300 aparece", arbol.cantidad(300), "veces en el árbol")
+
+    # contar cuántos números pares e impares hay en el árbol
+    pares, impares = arbol.contar_pares_impares()
+    print("Cantidad de números pares:", pares)
+    print("Cantidad de números impares:", impares)
